@@ -1,0 +1,9 @@
+body { background: #f5f6f8; }
+.shell { padding: 12px; }
+.topbar strong { font-size: 16px; }
+.controls { padding: 12px; }
+#refresh { padding: 7px 11px; border: 0; border-radius: 6px; background: #00a1d6; color: white; }
+.previews { gap: 18px; margin-top: 18px; }
+.previews > div { flex-basis: 240px; }
+.desktop-card .cover { height: 180px; }
+.mobile-card .cover { height: 90px; }

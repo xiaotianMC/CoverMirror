@@ -1,0 +1,14 @@
+{
+  "name": "covermirror",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cross-platform cover preview for Photoshop and desktop",
+  "scripts": {
+    "start": "electron desktop/main.cjs",
+    "build:plugin": "node tools/build-plugin.cjs",
+    "check": "node --test tests/*.test.cjs && node tools/build-plugin.cjs"
+  },
+  "devDependencies": {
+    "electron": "^44.4.5"
+  }
+}

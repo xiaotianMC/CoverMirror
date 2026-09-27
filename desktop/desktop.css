@@ -1,0 +1,6 @@
+#source, #text-layer, #text-content { box-sizing: border-box; display: block; width: 100%; margin: 4px 0 10px; }
+#text-content { resize: vertical; }
+#ps-editor { border-top: 1px solid #ccc; margin-top: 14px; padding-top: 10px; }
+#ps-editor h2 { font-size: 15px; }
+#pair-code { user-select: all; overflow-wrap: anywhere; }
+#ps-editor button { margin-right: 6px; padding: 7px 10px; }

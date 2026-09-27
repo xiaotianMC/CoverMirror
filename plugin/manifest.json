@@ -1,0 +1,18 @@
+{
+  "manifestVersion": 5,
+  "id": "com.bilicover.preview",
+  "name": "CoverMirror",
+  "version": "0.1.0",
+  "main": "index.html",
+  "host": { "app": "PS", "minVersion": "24.4.0" },
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "coverPreview",
+      "label": { "default": "CoverMirror" },
+      "minimumSize": { "width": 280, "height": 360 },
+      "preferredDockedSize": { "width": 340, "height": 650 },
+      "preferredFloatingSize": { "width": 550, "height": 700 }
+    }
+  ]
+}

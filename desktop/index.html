@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CoverMirror</title>
+  <link rel="stylesheet" href="../shared/preview.css">
+  <link rel="stylesheet" href="./desktop.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div><strong>CoverMirror</strong><span>独立应用</span></div><span class="badge">B站预览</span></header>
+    <section class="controls">
+      <label class="upload">选择封面图片<input id="file" type="file" accept="image/*"></label>
+      <label>预览来源<select id="source"><option value="local">本地图片</option><option value="ps">Photoshop</option></select></label>
+      <p id="status" role="status">选择或拖入图片，查看封面在视频卡片中的效果。</p>
+      <p id="connection" role="status">等待 Photoshop 面板连接。</p>
+      <p>配对码：<code id="pair-code">正在启动…</code>（填入 Photoshop 面板）</p>
+      <div id="ps-editor">
+        <h2>Photoshop 文字图层</h2>
+        <label>文字图层<select id="text-layer"></select></label>
+        <label>图层内容<textarea id="text-content" rows="3"></textarea></label>
+        <button id="apply-text" type="button" disabled>应用到 Photoshop</button>
+        <button id="reset-text" type="button">放弃输入并重新读取</button>
+        <p id="text-status" role="status">等待 Photoshop 状态。</p>
+      </div>
+      <div class="fields">
+        <label>视频标题<input id="title" maxlength="80" value="这张封面在 B 站会是什么效果？"></label>
+        <label>UP 主<input id="author" maxlength="40" value="你的昵称"></label>
+        <label>时长<input id="duration" maxlength="8" value="08:26"></label>
+      </div>
+    </section>
+    <section class="previews" aria-label="封面预览">
+      <div><h2>桌面端视频卡片</h2><article class="card desktop-card"><div class="cover"><img class="cover-image" alt="封面预览"><span class="empty">等待封面图片</span><span class="duration"></span></div><div class="card-title"></div><div class="card-author"></div></article></div>
+      <div><h2>移动端视频卡片</h2><article class="card mobile-card"><div class="cover"><img class="cover-image" alt="封面预览"><span class="empty">等待封面图片</span><span class="duration"></span></div><div class="details"><div class="card-title"></div><div class="card-author"></div></div></article></div>
+    </section>
+    <p class="note">界面仅用于设计预览，B 站实际页面可能调整。</p>
+  </main>
+  <script src="../shared/preview.js"></script>
+  <script src="./renderer.js"></script>
+</body>
+</html>

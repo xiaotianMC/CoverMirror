@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CoverMirror</title>
+  <link rel="stylesheet" href="shared/preview.css">
+  <link rel="stylesheet" href="plugin.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><strong>CoverMirror</strong><span class="badge">B站预览</span></header>
+    <section class="controls">
+      <button id="refresh" type="button">立即刷新</button>
+      <p id="status" role="status">正在读取当前文档…</p>
+      <div class="fields">
+        <label>视频标题<input id="title" maxlength="80" value="这张封面在 B 站会是什么效果？"></label>
+        <label>UP 主<input id="author" maxlength="40" value="你的昵称"></label>
+        <label>时长<input id="duration" maxlength="8" value="08:26"></label>
+      </div>
+    </section>
+    <section class="previews" aria-label="封面预览">
+      <div><h2>桌面端视频卡片</h2><article class="card desktop-card"><div class="cover"><img class="cover-image" alt="封面预览"><span class="empty">打开 PS 文档后显示</span><span class="duration"></span></div><div class="card-title"></div><div class="card-author"></div></article></div>
+      <div><h2>移动端视频卡片</h2><article class="card mobile-card"><div class="cover"><img class="cover-image" alt="封面预览"><span class="empty">打开 PS 文档后显示</span><span class="duration"></span></div><div class="details"><div class="card-title"></div><div class="card-author"></div></div></article></div>
+    </section>
+    <p class="note">自动读取当前活动文档的合成画面，无需保存或导出。</p>
+  </main>
+  <script src="shared/preview.js"></script>
+  <script src="plugin.js"></script>
+</body>
+</html>

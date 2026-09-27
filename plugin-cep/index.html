@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CoverMirror</title>
+  <link rel="stylesheet" href="shared/preview.css">
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><strong>CoverMirror</strong><span class="badge">B站预览</span></header>
+    <section class="controls">
+      <button id="refresh" type="button">立即刷新</button>
+      <p id="status" role="status">正在读取当前文档…</p>
+      <div class="bridge-controls">
+        <label>桌面应用配对码<input id="pair-code" type="text" autocomplete="off" spellcheck="false" placeholder="端口:配对令牌"></label>
+        <button id="pair" type="button">连接桌面应用</button>
+        <p id="bridge-status" role="status">尚未连接桌面应用。</p>
+      </div>
+      <div class="fields">
+        <label>视频标题<input id="title" maxlength="80" value="这张封面在 B 站会是什么效果？"></label>
+        <label>UP 主<input id="author" maxlength="40" value="你的昵称"></label>
+        <label>时长<input id="duration" maxlength="8" value="08:26"></label>
+      </div>
+      <div class="text-editor">
+        <h2>PSD 文字图层</h2>
+        <label>选择文字图层<select id="text-layer"></select></label>
+        <label>图层内容<textarea id="text-content" rows="3"></textarea></label>
+        <button id="apply-text" type="button" disabled>应用到 Photoshop</button>
+        <button id="reset-text" type="button">放弃输入并重新读取</button>
+        <p id="text-status" role="status">正在读取文字图层…</p>
+      </div>
+    </section>
+    <section class="previews" aria-label="封面预览">
+      <div><h2>桌面端视频卡片</h2><article class="card desktop-card"><div class="cover"><img class="cover-image" alt="封面预览"><span class="empty">打开 PS 文档后显示</span><span class="duration"></span></div><div class="card-title"></div><div class="card-author"></div></article></div>
+      <div><h2>移动端视频卡片</h2><article class="card mobile-card"><div class="cover"><img class="cover-image" alt="封面预览"><span class="empty">打开 PS 文档后显示</span><span class="duration"></span></div><div class="details"><div class="card-title"></div><div class="card-author"></div></div></article></div>
+    </section>
+    <p class="note">自动生成当前活动文档的临时缩略图；原文档不会保存。</p>
+  </main>
+  <script src="shared/preview.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>
